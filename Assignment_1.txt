@@ -1,0 +1,86 @@
+1.Q1. What is the purpose of Python's OOP?
+
+ans Python's OOP features provide a powerful way to organize and structure code, making it easier to write maintainable, reusable, and extensible code. By encapsulating data and behavior into objects, developers can create more modular code that can be reused in multiple parts of a program. Additionally, by using inheritance and polymorphism, developers can create variations on existing functionality without having to rewrite code from scratch. Overall, OOP is a powerful tool in Python that can lead to more efficient and effective programming.
+
+Q2. Where does an inheritance search look for an attribute?
+
+ans Python performs an attribute resolution search that starts with the object's class and moves up the class hierarchy until the attribute is found or an AttributeError is raised. The order in which Python searches for attributes is determined by the method resolution order (MRO), which is calculated using the C3 linearization algorithm. This ensures that each class appears before its ancestors and that the search order is consistent and unambiguous. By using inheritance and understanding how attribute resolution works in Python, developers can write more efficient and effective code that is easier to maintain and extend.
+
+Q3. How do you distinguish between a class object and an instance object?
+
+ans A class in Python is a blueprint or a template for creating objects, while an instance is an individual object created from that class. The class defines the attributes and methods that describe the behavior and properties of the objects created from it. The main differences between a class object and an instance object are related to their definition, attributes, methods, memory allocation, and relationship with each other. Understanding these differences is important in Python programming as it helps in designing and creating reusable, maintainable, and scalable code.
+
+Q4. What makes the first argument in a class’s method function special?
+
+ans In Python, the first argument in a class's method function is conventionally named "self". This argument refers to the instance of the class that the method is called on. It is a reference to the object that is calling the method.
+
+The "self" parameter is special in Python because it allows the method to access and manipulate the object's instance variables and other attributes. Without "self", the method would not be able to know which object's attributes to access or modify.
+
+When a method is called on an instance of a class, Python automatically passes the instance as the first argument to the method. This means that when you define a method in a class, you must include "self" as the first parameter in the method definition
+
+for example:
+class MyClass:
+    def my_method(self, x):
+        self.x = x
+
+Q5. What is the purpose of the __init__ method?
+
+
+ans In Python, the __init__ method is a special method that is automatically called when an object is created from a class. The purpose of the __init__ method is to initialize the attributes of the object with values passed as arguments when the object is created.
+
+The __init__ method is typically used to set up the initial state of the object by assigning values to instance variables. Instance variables are variables that are unique to each instance of a class, and they are accessed using the self parameter.
+
+for example:
+class MyClass:
+    def __init__(self, x, y):
+        self.x = x
+        self.y = y
+
+
+Q6. What is the process for creating a class instance?
+
+
+ans In Python, creating an instance of a class involves the following steps:
+
+Define the class: First, define the class blueprint that describes the properties and behavior of the object that you want to create. The class specifies the attributes and methods that will be available to instances of the class.
+
+Instantiate the class: To create an instance of the class, call the class like a function with any arguments required by the init method. This will create a new instance of the class and return it.
+
+for example:
+class Dog:
+    def __init__(self, name, breed):
+        self.name = name
+        self.breed = breed
+
+dog1 = Dog("tom", "jarry")
+
+
+output:
+
+print(dog1.name)  Output: Buddy
+print(dog1.breed)  Output: Golden Retriever
+
+Q7. What is the process for creating a class?
+
+ans the process for creatinga class are following steps:
+
+Define the class: Use the class keyword followed by the class name to define the class.
+
+Define the constructor: Define the __init__ method, which is the constructor for the class. The constructor is responsible for initializing the object's attributes when an instance of the class is created.
+
+Define other methods: Define any other methods that are necessary for the class. These methods define the behavior of the class and can be called on instances of the class.
+
+Define class and instance attributes: Define any class and instance attributes that are necessary for the class. Class attributes are shared among all instances of the class, while instance attributes are unique to each instance.
+
+Instantiate the class: Create an instance of the class using the class name and any necessary arguments to the constructor. This creates a new object of the class and initializes its attributes.
+
+
+Q8. How would you define the superclasses of a class?
+
+
+ans A class can inherit attributes and behaviors from one or more parent classes, also known as superclasses. To define the superclasses of a class, you need to specify them in the class definition using the following syntax: 
+ class SubclassName(SuperClass1, SuperClass2, ...):
+    # class body
+
+
+
